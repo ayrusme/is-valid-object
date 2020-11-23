@@ -1,0 +1,27 @@
+{
+    "name": "object-schema",
+    "version": "0.0.1",
+    "description": "Validate Objects in Node.js",
+    "main": "./lib/index.js",
+    "directories": {
+      "example": "examples"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ayrusme/object-schema.git"
+    },
+    "keywords": [
+      "json",
+      "schema",
+      "object"
+    ],
+    "author": "Surya Raman",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/ayrusme/object-schema/issues"
+    },
+    "homepage": "https://github.com/ayrusme/object-schema#readme"
+  }
