@@ -17,7 +17,8 @@ const toBeChecked = {
 const schema = {
     first: {
         type: "string",
-        length: 25,
+        max_length: 25,
+        min_length: 19,
     },
     second: {
         type: "integer",
@@ -51,7 +52,7 @@ const schema = {
     },
 };
 
-console.time('object-checker')
+console.time("object-checker");
 const checker = new ObjectChecker();
 checker.check(toBeChecked, schema);
-console.timeEnd('object-checker')
+console.timeEnd("object-checker");
