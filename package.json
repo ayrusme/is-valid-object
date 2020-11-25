@@ -18,7 +18,7 @@
     "schema",
     "object"
   ],
-  "author": "Surya Raman",
+  "author": "Surya Raman <ayrusme@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ayrusme/object-schema/issues"
@@ -29,5 +29,6 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1"
-  }
+  },
+  "type": "module"
 }

@@ -1,4 +1,4 @@
-const { ObjectChecker } = require("../lib/index");
+import { ObjectChecker } from "../lib/index.js";
 
 const toBeChecked = {
     first: "this is a string",
@@ -18,7 +18,7 @@ const schema = {
     first: {
         type: "string",
         max_length: 25,
-        min_length: 19,
+        min_length: 1,
     },
     second: {
         type: "integer",
