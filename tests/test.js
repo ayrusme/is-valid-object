@@ -22,13 +22,13 @@ const schema = {
     },
     second: {
         type: "integer",
-        lower_range: 10,
-        upper_range: 50,
+        min_range: 10,
+        max_range: 500,
     },
     third: {
         type: "float",
-        lower_range: 10,
-        upper_range: 50,
+        min_range: 10,
+        max_range: 500,
     },
     fourth: {
         type: "object",
