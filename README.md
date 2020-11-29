@@ -1,15 +1,15 @@
-# Object-Schema
+# is-valid-object
 
-object-schema is a Javascript library for making sure objects conform to a defined structure.
+is-valid-object is a Javascript library for making sure objects conform to a defined structure.
 
 ## Installation
 ```bash
-npm install object-schema
+npm install is-valid-object
 ```
 
 ## Usage
 ```javascript
-import { ObjectChecker } from 'object-schema';
+import { ObjectChecker } from 'is-valid-object';
 
 const schema = {
     "keyToCheck": {
@@ -41,4 +41,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](./LICENSE)

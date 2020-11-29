@@ -1,4 +1,4 @@
-import { ObjectChecker } from "../lib/index.js";
+import { ObjectChecker } from "is-valid-object";
 
 const schema = {
     // declare the properties from the other object and describe their type

@@ -1,5 +1,5 @@
 {
-  "name": "object-schema",
+  "name": "is-valid-object",
   "version": "0.0.1",
   "description": "Validate Objects in Node.js",
   "main": "./lib/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayrusme/object-schema.git"
+    "url": "git+https://github.com/ayrusme/is-valid-object.git"
   },
   "keywords": [
     "json",
@@ -21,9 +21,9 @@
   "author": "Surya Raman <ayrusme@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ayrusme/object-schema/issues"
+    "url": "https://github.com/ayrusme/is-valid-object/issues"
   },
-  "homepage": "https://github.com/ayrusme/object-schema#readme",
+  "homepage": "https://github.com/ayrusme/is-valid-object#readme",
   "devDependencies": {
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
