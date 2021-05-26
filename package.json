@@ -1,6 +1,6 @@
 {
   "name": "is-valid-object",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Validate Objects in Node.js",
   "main": "./lib/index.js",
   "directories": {
@@ -30,6 +30,5 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "mocha": "^8.2.1"
-  },
-  "type": "module"
+  }
 }

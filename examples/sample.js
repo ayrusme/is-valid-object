@@ -1,4 +1,4 @@
-import { ObjectChecker } from "is-valid-object";
+const { ObjectChecker } = require("is-valid-object");
 
 const schema = {
     // declare the properties from the other object and describe their type
