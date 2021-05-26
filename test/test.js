@@ -1,13 +1,14 @@
+/* eslint-disable no-console */
 // I use this file to test the class whenever I make changes to the class
 
-const { ObjectChecker } = require("../lib/index.js");
+const { ObjectChecker } = require('../lib/index.js');
 
 const toBeChecked = {
-    first: "this is a string",
+    first: 'this is a string',
     second: 100,
     third: 50.52,
     fourth: {
-        fifth: "hello string",
+        fifth: 'hello string',
         sixth: {
             seventh: "doesn't matter",
         },
@@ -18,43 +19,43 @@ const toBeChecked = {
 
 const schema = {
     first: {
-        type: "string",
-        max_length: 25,
-        min_length: 1,
+        type: 'string',
+        maxLength: 25,
+        minLength: 1,
     },
     second: {
-        type: "integer",
-        min_range: 10,
-        max_range: 500,
+        type: 'integer',
+        minRange: 10,
+        maxRange: 500,
     },
     third: {
-        type: "float",
-        min_range: 10,
-        max_range: 500,
+        type: 'float',
+        minRange: 10,
+        maxRange: 500,
     },
     fourth: {
-        type: "object",
+        type: 'object',
         properties: {
             fifth: {
-                type: "string",
+                type: 'string',
             },
             sixth: {
-                type: "any",
+                type: 'any',
             },
         },
     },
     eighth: {
-        type: "array",
-        min_length: 2,
-        max_length: 5,
-        elements_type: "integer",
+        type: 'array',
+        minLength: 2,
+        maxLength: 5,
+        elements_type: 'integer',
     },
     ninth: {
-        type: "bool",
+        type: 'bool',
     },
 };
 
-console.time("object-checker");
+console.time('object-checker');
 const checker = new ObjectChecker();
 checker.check(toBeChecked, schema);
-console.timeEnd("object-checker");
+console.timeEnd('object-checker');

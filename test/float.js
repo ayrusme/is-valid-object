@@ -1,10 +1,9 @@
-const { doesNotThrow, throws } = require("assert");
+const { doesNotThrow, throws } = require('assert');
 
-const { ObjectChecker } = require("../lib/index.js");
+const { ObjectChecker } = require('../lib/index.js');
 
-
-describe("Float", function () {
-    it("should not throw when presented with valid float", () => {
+describe('Float', () => {
+    it('should not throw when presented with valid float', () => {
         doesNotThrow(() => {
             const checker = new ObjectChecker();
             checker.check(
@@ -13,28 +12,28 @@ describe("Float", function () {
                 },
                 {
                     float_key: {
-                        type: "float",
-                        min_range: 10,
-                        max_range: 500,
+                        type: 'float',
+                        minRange: 10,
+                        maxRange: 500,
                     },
-                }
+                },
             );
         });
     });
-    it("should throw when presented with invalid data type", () => {
+    it('should throw when presented with invalid data type', () => {
         throws(() => {
             const checker = new ObjectChecker();
             checker.check(
                 {
-                    float_key: ["something"],
+                    float_key: ['something'],
                 },
                 {
                     float_key: {
-                        type: "float",
-                        min_range: 10,
-                        max_range: 500,
+                        type: 'float',
+                        minRange: 10,
+                        maxRange: 500,
                     },
-                }
+                },
             );
         });
         // int is not float
@@ -46,15 +45,15 @@ describe("Float", function () {
                 },
                 {
                     float_key: {
-                        type: "float",
-                        min_range: 10,
-                        max_range: 500,
+                        type: 'float',
+                        minRange: 10,
+                        maxRange: 500,
                     },
-                }
+                },
             );
         });
     });
-    it("should throw when float range is not as per schema", () => {
+    it('should throw when float range is not as per schema', () => {
         // lte
         throws(() => {
             const checker = new ObjectChecker();
@@ -64,11 +63,11 @@ describe("Float", function () {
                 },
                 {
                     float_key: {
-                        type: "float",
-                        min_range: 10,
-                        max_range: 500,
+                        type: 'float',
+                        minRange: 10,
+                        maxRange: 500,
                     },
-                }
+                },
             );
         });
         // gte
@@ -80,15 +79,15 @@ describe("Float", function () {
                 },
                 {
                     float_key: {
-                        type: "float",
-                        min_range: 10,
-                        max_range: 500,
+                        type: 'float',
+                        minRange: 10,
+                        maxRange: 500,
                     },
-                }
+                },
             );
         });
     });
-    it("should throw when presented with no/invalid schema", () => {
+    it('should throw when presented with no/invalid schema', () => {
         // no schema
         throws(() => {
             const checker = new ObjectChecker();
@@ -104,8 +103,8 @@ describe("Float", function () {
                     float_key: 100.12,
                 },
                 {
-                    float_key: "something",
-                }
+                    float_key: 'something',
+                },
             );
         });
     });

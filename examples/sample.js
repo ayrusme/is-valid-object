@@ -5,20 +5,20 @@ const schema = {
     first: {
         type: "string",
         // the maximum and the minimum length allowed for the string
-        max_length: 25,
-        min_length: 1,
+        maxLength: 25,
+        minLength: 1,
     },
     second: {
         type: "integer",
         // the maximum and the minimum range allowed for the number
-        min_range: 10,
-        max_range: 500,
+        minRange: 10,
+        maxRange: 500,
     },
     third: {
         type: "float",
         // the maximum and the minimum range allowed for the number
-        min_range: 10,
-        max_range: 500,
+        minRange: 10,
+        maxRange: 500,
     },
     fourth: {
         // schema can recusively iterate objects and validate them
@@ -36,8 +36,8 @@ const schema = {
     eighth: {
         // for arrays, the elements can be validated with the type, minimum and maxiumum arr length
         type: "array",
-        min_length: 2,
-        max_length: 5,
+        minLength: 2,
+        maxLength: 5,
         elements_type: "integer",
     },
     ninth: {

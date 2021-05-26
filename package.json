@@ -1,6 +1,6 @@
 {
   "name": "is-valid-object",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Validate Objects in Node.js",
   "main": "./lib/index.js",
   "directories": {
@@ -27,7 +27,6 @@
   "devDependencies": {
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "mocha": "^8.2.1"
   }

@@ -1,15 +1,15 @@
-const { doesNotThrow, throws } = require("assert");
+const { doesNotThrow, throws } = require('assert');
 
-const { ObjectChecker } = require("../lib/index.js");
+const { ObjectChecker } = require('../lib/index.js');
 
-describe("Object", function () {
-    it("should not throw when presented with valid object", () => {
+describe('Object', () => {
+    it('should not throw when presented with valid object', () => {
         doesNotThrow(() => {
             const checker = new ObjectChecker();
             checker.check(
                 {
                     obj_key: {
-                        first_key: "This is a string",
+                        first_key: 'This is a string',
                         second_key: {
                             third_key: 50,
                             fourth_key: {
@@ -20,24 +20,24 @@ describe("Object", function () {
                 },
                 {
                     obj_key: {
-                        type: "object",
+                        type: 'object',
                         properties: {
                             first_key: {
-                                type: "string",
+                                type: 'string',
                             },
                             second_key: {
-                                type: "object",
+                                type: 'object',
                                 properties: {
                                     third_key: {
-                                        type: "integer",
-                                        min_range: 10,
-                                        max_range: 500,
+                                        type: 'integer',
+                                        minRange: 10,
+                                        maxRange: 500,
                                     },
                                     fourth_key: {
-                                        type: "object",
+                                        type: 'object',
                                         properties: {
                                             fifth_key: {
-                                                type: "any",
+                                                type: 'any',
                                             },
                                         },
                                     },
@@ -45,37 +45,37 @@ describe("Object", function () {
                             },
                         },
                     },
-                }
+                },
             );
         });
     });
-    it("should throw when presented with an invalid object", () => {
+    it('should throw when presented with an invalid object', () => {
         throws(() => {
             const checker = new ObjectChecker();
             checker.check(
                 {
-                    obj_key: "This is a string",
+                    obj_key: 'This is a string',
                 },
                 {
                     obj_key: {
-                        type: "object",
+                        type: 'object',
                         properties: {
                             first_key: {
-                                type: "string",
+                                type: 'string',
                             },
                         },
                     },
-                }
+                },
             );
         });
     });
-    it("should throw when presented with no/invalid schema", () => {
+    it('should throw when presented with no/invalid schema', () => {
         // no schema
         throws(() => {
             const checker = new ObjectChecker();
             checker.check({
                 obj_key: {
-                    first_key: "This is a string",
+                    first_key: 'This is a string',
                     second_key: {
                         third_key: 50,
                         fourth_key: {
@@ -91,7 +91,7 @@ describe("Object", function () {
             checker.check(
                 {
                     obj_key: {
-                        first_key: "This is a string",
+                        first_key: 'This is a string',
                         second_key: {
                             third_key: 50,
                             fourth_key: {
@@ -101,8 +101,8 @@ describe("Object", function () {
                     },
                 },
                 {
-                    obj_key: "something",
-                }
+                    obj_key: 'something',
+                },
             );
         });
     });
