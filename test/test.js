@@ -1,6 +1,6 @@
 // I use this file to test the class whenever I make changes to the class
 
-import { ObjectChecker } from "../lib/index.js";
+const { ObjectChecker } = require("../lib/index.js");
 
 const toBeChecked = {
     first: "this is a string",

@@ -1,6 +1,6 @@
-import { doesNotThrow, throws } from "assert";
+const { doesNotThrow, throws } = require("assert");
 
-import { ObjectChecker } from "../lib/index.js";
+const { ObjectChecker } = require("../lib/index.js");
 
 describe("Integer", function () {
     it("should not throw when presented with valid int", () => {
