@@ -1,60 +1,61 @@
-const { ObjectChecker } = require("is-valid-object");
+/* eslint-disable no-console */
+const { ObjectChecker } = require('is-valid-object');
 
 const schema = {
     // declare the properties from the other object and describe their type
     first: {
-        type: "string",
+        type: 'string',
         // the maximum and the minimum length allowed for the string
         maxLength: 25,
         minLength: 1,
     },
     second: {
-        type: "integer",
+        type: 'integer',
         // the maximum and the minimum range allowed for the number
         minRange: 10,
         maxRange: 500,
     },
     third: {
-        type: "float",
+        type: 'float',
         // the maximum and the minimum range allowed for the number
         minRange: 10,
         maxRange: 500,
     },
     fourth: {
         // schema can recusively iterate objects and validate them
-        type: "object",
+        type: 'object',
         // the properties follow the same rules as regular keys
         properties: {
             fifth: {
-                type: "string",
+                type: 'string',
             },
             sixth: {
-                type: "any",
+                type: 'any',
             },
         },
     },
     eighth: {
         // for arrays, the elements can be validated with the type, minimum and maxiumum arr length
-        type: "array",
+        type: 'array',
         minLength: 2,
         maxLength: 5,
-        elements_type: "integer",
+        elements_type: 'integer',
     },
     ninth: {
         // boolean variables can be checked if they're either true or false
-        type: "bool",
+        type: 'bool',
     },
 };
 
 // declare the object which needs to be checked
 // this will be in-line with the schema declared earlier
 const toBeChecked = {
-    first: "this is a string",
+    first: 'this is a string',
     second: 100,
     // beware that 50.0 is still integer and not float in js
     third: 50.52,
     fourth: {
-        fifth: "hello string",
+        fifth: 'hello string',
         sixth: {
             seventh: "doesn't matter",
         },
@@ -63,7 +64,7 @@ const toBeChecked = {
     ninth: true,
 };
 
-console.time("object-checker");
+console.time('object-checker');
 const checker = new ObjectChecker();
 // arg one is the object to be checked and arg two is the schema for that object
 // @returns {
@@ -73,4 +74,4 @@ const checker = new ObjectChecker();
 // the method will throw exceptions with { error: "some message" } if any of the items don't confirm
 // to the specified shcema
 checker.check(toBeChecked, schema);
-console.timeEnd("object-checker");
+console.timeEnd('object-checker');
