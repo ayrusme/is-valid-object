@@ -1,6 +1,6 @@
 {
   "name": "is-valid-object",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Validate Objects in Node.js",
   "main": "./lib/index.js",
   "directories": {
