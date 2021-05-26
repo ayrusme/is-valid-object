@@ -2,19 +2,17 @@ const { doesNotThrow, throws } = require('assert');
 
 const { ObjectChecker } = require('../lib/index.js');
 
-describe('String', () => {
-    it('should not throw when presented with valid string', () => {
+describe('Email', () => {
+    it('should not throw when presented with valid email', () => {
         doesNotThrow(() => {
             const checker = new ObjectChecker();
             checker.check(
                 {
-                    str_key: 'This is a string',
+                    email_key: 'abc@abc.com',
                 },
                 {
-                    str_key: {
-                        type: 'string',
-                        maxLength: 25,
-                        minLength: 1,
+                    email_key: {
+                        type: 'email',
                     },
                 },
             );
@@ -25,45 +23,26 @@ describe('String', () => {
             const checker = new ObjectChecker();
             checker.check(
                 {
-                    str_key: ['This is a string'],
+                    email_key: ['abc@abc.com'],
                 },
                 {
-                    str_key: {
-                        type: 'string',
-                        maxLength: 25,
-                        minLength: 1,
+                    email_key: {
+                        type: 'email',
                     },
                 },
             );
         });
     });
-    it('should throw when string length is not as per schema', () => {
+    it('should throw when presented with invalid email', () => {
         throws(() => {
             const checker = new ObjectChecker();
             checker.check(
                 {
-                    str_key: 'abc',
+                    email_key: 'abc',
                 },
                 {
-                    str_key: {
-                        type: 'string',
-                        maxLength: 25,
-                        minLength: 5,
-                    },
-                },
-            );
-        });
-        throws(() => {
-            const checker = new ObjectChecker();
-            checker.check(
-                {
-                    str_key: 'This is a string',
-                },
-                {
-                    str_key: {
-                        type: 'string',
-                        maxLength: 3,
-                        minLength: 1,
+                    email_key: {
+                        type: 'email',
                     },
                 },
             );
@@ -74,7 +53,7 @@ describe('String', () => {
         throws(() => {
             const checker = new ObjectChecker();
             checker.check({
-                str_key: 'string here',
+                email_key: 'abc@abc.com',
             });
         });
         // invalid schema
@@ -82,10 +61,10 @@ describe('String', () => {
             const checker = new ObjectChecker();
             checker.check(
                 {
-                    str_key: 'string here',
+                    email_key: 'abc@abc.com',
                 },
                 {
-                    str_key: 'something',
+                    email_key: 'something',
                 },
             );
         });
