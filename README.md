@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/is-valid-object.svg)](https://badge.fury.io/js/is-valid-object)
+
 # is-valid-object
 
 is-valid-object is a Javascript library for making sure objects conform to a defined structure.
